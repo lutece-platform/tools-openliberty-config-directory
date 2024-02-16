@@ -13,9 +13,10 @@
         <feature>mpConfig-3.1</feature>
         <feature>mail-2.1</feature>
         <feature>xmlBinding-4.0</feature>
-    </featureManager>
+        <feature>concurrent-3.0</feature>
+     </featureManager>
 
-    <variable defaultValue="9081" name="default.http.port"/>
+    <variable defaultValue="9080" name="default.http.port"/>
     <variable defaultValue="9443" name="default.https.port"/>
     <variable defaultValue="lutece" name="app.context.root"/>
 
