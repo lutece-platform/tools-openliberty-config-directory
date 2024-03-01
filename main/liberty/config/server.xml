@@ -22,7 +22,15 @@
 
     <!-- tag::httpEndpoint[] -->
     <httpEndpoint host="*" httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
-    <!-- end::httpEndpoint[] 
-    <webApplication contextRoot="${app.context.root}" id="lutece" location="/home/yahiaoui/lutece/workspace-plugins/tools-git-scripts/tools-git-scripts/lutece-core/target/lutece"/>
--->
+    <!-- end::httpEndpoint[] -->
+    
+    <!-- log4j configuration directory -->
+     <!--   
+	 <library id="log4jConfig">
+	          <folder dir="${build.directory}/lutece/WEB-INF/conf" scanInterval="5s" />
+	</library>
+	-->    
+    <application name="lutece" context-root="${app.context.root}" location="${appLocation}" type="war">		
+		<!-- <classloader commonLibraryRef="log4jConfig"/>-->
+	</application>
 </server>
